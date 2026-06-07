@@ -402,7 +402,7 @@ const booking = {
 if(selectedBookingId){
 
     await fetch(
-        `https://YOUR-RENDER-URL.onrender.com/bookings/${selectedBookingId}`,
+        `https://batball-booking.onrender.com/bookings/${selectedBookingId}`,
         {
             method:"PUT",
             headers:{
@@ -421,7 +421,7 @@ if(selectedBookingId){
 try{
 
     await fetch(
-        "https://YOUR-RENDER-URL.onrender.com/bookings",
+        "https://batball-booking.onrender.com/bookings",
         {
             method:"POST",
             headers:{
@@ -456,7 +456,7 @@ async function loadBookings(){
 ).toLowerCase();
     const response =
         await fetch(
-            "https://YOUR-RENDER-URL.onrender.com/bookings"
+            "https://batball-booking.onrender.com/bookings"
         );
 
     const bookings =
@@ -542,7 +542,7 @@ async function deleteBooking(id){
 console.log("Deleting booking:", id);
 
 const response = await fetch(
-    `https://YOUR-RENDER-URL.onrender.com/bookings/${id}`,
+    `https://batball-booking.onrender.com/bookings/${id}`,
     {
         method:"DELETE"
     }
@@ -559,7 +559,7 @@ async function openEditBooking(id){
 
     const response =
         await fetch(
-            "https://YOUR-RENDER-URL.onrender.com/bookings"
+            "https://batball-booking.onrender.com/bookings"
         );
 
     const bookings =
@@ -621,7 +621,7 @@ async function customerHistory(){
 
     const response =
         await fetch(
-            "https://YOUR-RENDER-URL.onrender.com/bookings"
+            "https://batball-booking.onrender.com/bookings"
         );
 
     const bookings =
@@ -636,7 +636,7 @@ async function customerHistory(){
 
     const historyResponse =
         await fetch(
-            `https://YOUR-RENDER-URL.onrender.com/customer/${booking.player_name}`
+            `https://batball-booking.onrender.com/customer/${booking.player_name}`
         );
 
     const history =
@@ -736,7 +736,7 @@ while(current <= end){
 
     const response =
         await fetch(
-            "https://YOUR-RENDER-URL.onrender.com/bulk-check",
+            "https://batball-booking.onrender.com/bulk-check",
             {
                 method:"POST",
                 headers:{
@@ -855,7 +855,7 @@ async function createBulkBookings(){
     );
 
     await fetch(
-        "https://YOUR-RENDER-URL.onrender.com/bulk-create",
+        "https://batball-booking.onrender.com/bulk-create",
         {
             method:"POST",
             headers:{
@@ -931,7 +931,7 @@ async function bookCart(){
     for(const item of cart){
 
         await fetch(
-            "https://YOUR-RENDER-URL.onrender.com/bookings",
+            "https://batball-booking.onrender.com/bookings",
             {
                 method:"POST",
                 headers:{
