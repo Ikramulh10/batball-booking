@@ -62,7 +62,7 @@ th,td{
 }
 
 .advance{
-    background:#ef4444;
+    background:#3b82f6;
     color:white;
 }
 
@@ -75,7 +75,15 @@ th,td{
     background:#f59e0b;
     color:white;
 }
+.playo{
+    background:#ef4444;
+    color:white;
+}
 
+.court-payment{
+    background:#8b5cf6;
+    color:white;
+}
 .empty{
     cursor:pointer;
 }
@@ -259,6 +267,8 @@ placeholder="Search Customer">
 <select id="bookingType">
 <option value="advance">Advance</option>
 <option value="monthly">Monthly</option>
+<option value="playo">Playo</option>
+<option value="court_payment">Court Payment</option>
 <option value="pending">Pending</option>
 </select>
 
@@ -509,17 +519,25 @@ ${b.phone || ""}
 `;
         cell.dataset.bookingId = b.id;
 
-        if(b.booking_type==="advance"){
-            cell.className="advance";
-        }
+if(b.booking_type==="advance"){
+    cell.className="advance";
+}
 
-        if(b.booking_type==="monthly"){
-            cell.className="monthly-member";
-        }
+if(b.booking_type==="monthly"){
+    cell.className="monthly-member";
+}
 
-        if(b.booking_type==="pending"){
-            cell.className="pending";
-        }
+if(b.booking_type==="playo"){
+    cell.className="playo";
+}
+
+if(b.booking_type==="court_payment"){
+    cell.className="court-payment";
+}
+
+if(b.booking_type==="pending"){
+    cell.className="pending";
+}
 
     });
 }
